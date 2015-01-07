@@ -9,6 +9,6 @@
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
-    <NameOfLastUsedPublishProfile>RomitWebJob - Web Deploy</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>RomitWebJob</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
