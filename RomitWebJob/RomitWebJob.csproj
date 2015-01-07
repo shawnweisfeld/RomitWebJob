@@ -11,6 +11,7 @@
     <AssemblyName>RomitWebJob</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -100,38 +100,11 @@
     <Compile Include="Functions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueueMessage.cs">
-      <DependentUpon>RomitMessagesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RomitMessagesModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RomitMessagesModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RomitMessagesModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RomitMessagesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RomitMessagesModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RomitMessagesModel.edmx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\RomitWebJob - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\RomitWebJob - Web Deploy.pubxml" />
     <None Include="Properties\webjob-publish-settings.json" />
-    <EntityDeploy Include="RomitMessagesModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RomitMessagesModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="RomitMessagesModel.edmx.diagram">
-      <DependentUpon>RomitMessagesModel.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -154,18 +127,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RomitMessagesModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RomitMessagesModel.edmx</DependentUpon>
-      <LastGenOutput>RomitMessagesModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="RomitMessagesModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RomitMessagesModel.edmx</DependentUpon>
-      <LastGenOutput>RomitMessagesModel.cs</LastGenOutput>
-    </Content>
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Web.WebJobs.Publish.1.0.0\tools\webjobs.targets" Condition="Exists('..\packages\Microsoft.Web.WebJobs.Publish.1.0.0\tools\webjobs.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

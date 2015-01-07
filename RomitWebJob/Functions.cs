@@ -13,15 +13,15 @@ namespace RomitWebJob
         {
             Console.WriteLine(message);
 
-            using (var db = new RomitMessagesEntities())
-            {
-                db.QueueMessages.Add(new QueueMessage()
-                    {
-                        MessageBody = message,
-                        MessageOn = DateTime.UtcNow
-                    });
-                db.SaveChanges();
-            }
+            //using (var db = new RomitMessagesEntities())
+            //{
+            //    db.QueueMessages.Add(new QueueMessage()
+            //        {
+            //            MessageBody = message,
+            //            MessageOn = DateTime.UtcNow
+            //        });
+            //    db.SaveChanges();
+            //}
         }
     }
 }
